@@ -1,10 +1,10 @@
 const gameArea = document.querySelector(".boundaries-area");
 let pacMen = [];
 
-function randomPos(a, b, c, d) {
+function randomPos(a, b) {
   return {
-    x: Math.floor(Math.random() * (a - b - 100) + 1) + Math.floor(b),
-    y: Math.floor(Math.random() * (c - d - 100) + 1) + Math.floor(d),
+    x: Math.floor(Math.random() * (a - 50)),
+    y: Math.floor(Math.random() * (b -50)),
   };
 }
 function randomValue(num) {
@@ -24,9 +24,7 @@ function makePacmen() {
   const bottomBoundary = gameAreaMea.height;
   let position = randomPos(
     rightBoundary,
-    leftBoundary,
     bottomBoundary,
-    topBoundary
   );
   var velocity = randomValue(10);
   let pacImg = document.createElement("img");
