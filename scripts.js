@@ -18,8 +18,6 @@ function makePacmen() {
   const gameAreaMea = document
     .querySelector(".boundaries-area")
     .getBoundingClientRect();
-  const leftBoundary = gameAreaMea.left;
-  const topBoundary = gameAreaMea.top;
   const rightBoundary = gameAreaMea.width;
   const bottomBoundary = gameAreaMea.height;
   let position = randomPos(
